@@ -1,0 +1,19 @@
+#!/bin/sh
+
+remote="$1"
+url="$2"
+
+template="git@github.com:itsvs/starter"
+
+z40=0000000000000000000000000000000000000000
+
+while read local_ref local_sha remote_ref remote_sha
+do
+	if [ "$url" = $template ]
+	then
+		echo "error: you're trying to push to the starter template!"
+		exit 1
+	fi
+done
+
+exit 0

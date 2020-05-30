@@ -1,0 +1,43 @@
+{
+    "sitetitle": "imvs",
+    "customcss": "https://go.imvs.me/style.css",
+    "header": {
+        "homelink": "https://imvs.me",
+        "homename": "vanshaj singhania",
+        "subtitle": "vanshaj [at] berkeley [dot] edu",
+        "topnav": [
+            {
+                "title": "cal",
+                "url": "https://cal.imvs.me"
+            },
+            {
+                "title": "comp sci",
+                "url": "https://cs.imvs.me"
+            },
+            {
+                "title": "flight sim",
+                "url": "https://fs.imvs.me"
+            }
+        ],
+        "subnav": [
+            {
+                "title": "blog",
+                "url": "/blog"
+            }
+        ]
+    },
+    "footer": {
+        "copyright": "vanshaj singhania. all rights reserved.",
+        "bottomnav": [
+            {
+                "title": "github",
+                "url": "https://github.com/itsvs"
+            },
+            {
+                "title": "linkedin",
+                "url": "https://linkedin.com/in/vanshaj-singhania"
+            }
+        ]
+    },
+    "customjs": "https://go.imvs.me/script.js"
+}

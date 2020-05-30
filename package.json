@@ -1,0 +1,26 @@
+{
+    "name": "imvs-template",
+    "version": "1.0.0",
+    "description": "Starter template for the imvs.me websites.",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "export": "next build && next export"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/itsvs/starter.git"
+    },
+    "author": "Vanshaj Singhania",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/itsvs/starter/issues"
+    },
+    "homepage": "https://github.com/itsvs/starter#readme",
+    "dependencies": {
+        "next": "9.3.5",
+        "react": "16.13.1",
+        "react-dom": "16.13.1"
+    }
+}
