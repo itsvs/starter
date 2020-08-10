@@ -1,59 +1,55 @@
-import config from '../config.json'
+import config from "../config.json";
 
 class Layout extends React.Component {
-
     constructor(props) {
-        super(props)
-        this.state = {navMob: {
-            display: "none"
-        }}
+        super(props);
+        this.state = {
+            navMob: {
+                display: "none",
+            },
+        };
     }
 
     nav(arr) {
-        var brk = [], fwd = []
-        arr.forEach(i => {
-            brk.push(<a href={i.url}>{i.title}</a>)
-            brk.push(<br />)
+        var brk = [],
+            fwd = [];
+        arr.forEach((i) => {
+            brk.push(<a href={i.url}>{i.title}</a>);
+            brk.push(<br />);
 
-            fwd.push(<a href={i.url}>{i.title}</a>)
-            fwd.push(" / ")
-        })
-        brk = brk.slice(0, -1)
-        fwd = fwd.slice(0, -1)
+            fwd.push(<a href={i.url}>{i.title}</a>);
+            fwd.push(" / ");
+        });
+        brk = brk.slice(0, -1);
+        fwd = fwd.slice(0, -1);
 
-        return [brk, fwd]
+        return [brk, fwd];
     }
 
     render() {
-        var subtitle = config.header.subtitle
-        var topNav = config.header.topnav
-        var subNav = config.header.subnav
-        var botNav = config.footer.bottomnav
-        var children = this.props.children
+        var subtitle = config.header.subtitle;
+        var topNav = config.header.topnav;
+        var subNav = config.header.subnav;
+        var botNav = config.footer.bottomnav;
+        var children = this.props.children;
 
-        if (topNav) var [topbreak, topslash] = this.nav(topNav)
-        if (subNav) var [subbreak, subslash] = this.nav(subNav)
-        if (botNav) var [botbreak, botslash] = this.nav(botNav)
-        
+        if (topNav) var [topbreak, topslash] = this.nav(topNav);
+        if (subNav) var [subbreak, subslash] = this.nav(subNav);
+        if (botNav) var [botbreak, botslash] = this.nav(botNav);
+
         return [
-            <div id="nav-mob" className="nav-overlay" key="0" style={this.state.navMob}>
+            <div
+                id="nav-mob"
+                className="nav-overlay"
+                key="0"
+                style={this.state.navMob}
+            >
                 <div className="nav-content" id="header">
                     {subNav
-                        ? [
-                            <h4 className="text-muted">
-                                {subbreak}
-                            </h4>,
-
-                            <hr />,
-                        ]
+                        ? [<h4 className="text-muted">{subbreak}</h4>, <hr />]
                         : ""}
 
-                    {topNav
-                        ? 
-                            <h4 className="text-muted">
-                                {topbreak}
-                            </h4>
-                        : ""}
+                    {topNav ? <h4 className="text-muted">{topbreak}</h4> : ""}
                 </div>
             </div>,
 
@@ -62,7 +58,21 @@ class Layout extends React.Component {
                     <nav className="navbar-light">
                         <div className="float-left">
                             <h4>
-                                {config.header.homelink ? <a href={config.header.homelink}>{config.header.homename ? config.header.homename : config.sitetitle ? config.sitetitle : "home"}</a> : config.header.homename ? config.header.homename : config.sitetitle ? config.sitetitle : "home"}
+                                {config.header.homelink ? (
+                                    <a href={config.header.homelink}>
+                                        {config.header.homename
+                                            ? config.header.homename
+                                            : config.sitetitle
+                                            ? config.sitetitle
+                                            : "home"}
+                                    </a>
+                                ) : config.header.homename ? (
+                                    config.header.homename
+                                ) : config.sitetitle ? (
+                                    config.sitetitle
+                                ) : (
+                                    "home"
+                                )}
                             </h4>
                         </div>
                         <div className="float-right">
@@ -102,7 +112,8 @@ class Layout extends React.Component {
             <footer className="footer" key="4">
                 <div className="container">
                     <span className="text-muted">
-                        &copy; {config.footer.copyright ? config.footer.copyright : ""}
+                        &copy;{" "}
+                        {config.footer.copyright ? config.footer.copyright : ""}
                         <span className="float-right" id="bottomNav">
                             {botNav ? botslash : ""}
                         </span>
@@ -128,20 +139,23 @@ class Layout extends React.Component {
                 crossOrigin="anonymous"
             ></script>,
 
-            config.customjs ? <script src="https://go.imvs.me/script.js"></script> : "",
+            config.customjs ? (
+                <script src="https://go.imvs.me/script.js"></script>
+            ) : (
+                ""
+            ),
 
             <script src="/custom.js"></script>,
         ];
     }
 
     toggleNav() {
-        if ($( "#nav-mob" ).css("display") == "block") {
-            $( "#nav-mob" ).css("display", "none")
+        if ($("#nav-mob").css("display") == "block") {
+            $("#nav-mob").css("display", "none");
         } else {
-            $( "#nav-mob" ).css("display", "block")
+            $("#nav-mob").css("display", "block");
         }
     }
-
 }
 
-export default Layout
+export default Layout;

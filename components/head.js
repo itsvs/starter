@@ -1,4 +1,4 @@
-import config from '../config.json'
+import config from "../config.json";
 import Head from "next/head";
 
 export default function Header({ pre, full, plus }) {
@@ -29,13 +29,15 @@ export default function Header({ pre, full, plus }) {
                 rel="stylesheet"
                 href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
             />
-            {config.customcss ? 
-            <link
-                rel="stylesheet"
-                href={config.customcss}
-                type="text/css"
-            /> : ""
-            }
+            {config.customcss ? (
+                <link
+                    rel="stylesheet"
+                    href={config.customcss}
+                    type="text/css"
+                />
+            ) : (
+                ""
+            )}
             <link rel="stylesheet" href="/style.css" type="text/css" />
             <link
                 rel="stylesheet"
