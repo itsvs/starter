@@ -1,6 +1,6 @@
 # imvs starter template
 
-This is the next.js starter template I use for most of my websites at [imvs.me](imvs.me). I was told it's a clean template and people wanted to replicate it, so I decided to make it public and reusable. Feel free to fork this repo and use it as a starting template, or use the built-in Makefile scripts to create a copy and get started!
+This is the next.js starter template I use for most of my websites at [imvs.me](https://imvs.me). I was told it's a clean template and people wanted to replicate it, so I decided to make it public and reusable. Feel free to fork this repo and use it as a starting template, or use the built-in Makefile scripts to create a copy and get started!
 
 ## Cloning This Template
 
@@ -11,7 +11,7 @@ To clone this template, you can do one of two things.
 Run the following command, replacing `starter-example` with the name of the folder you want to copy this repository into:
 
 ```sh
-$ curl -s https://go.imvs.me/copy | sh -s starter-example
+$ curl -s https://imvs.me/copy | sh -s starter-example
 ```
 
 This will have the same effect as the method below if you're using this specific template.
